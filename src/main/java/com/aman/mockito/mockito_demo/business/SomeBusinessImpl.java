@@ -1,6 +1,6 @@
 package com.aman.mockito.mockito_demo.business;
 
-public class SomeBusinessImpl {
+class SomeBusinessImpl {
     private DataService dataService;
 
     // Creating Constructor Injection for protection against dependency of
@@ -13,7 +13,7 @@ public class SomeBusinessImpl {
 
     public int findTheGreatestFromAllData(){
         int[] datas = dataService.retrieveAllData();
-        int greatestValue = Integer.MAX_VALUE;
+        int greatestValue = Integer.MIN_VALUE;
         for (int value:datas){
             if (value > greatestValue){
                 greatestValue = value;
